@@ -101,4 +101,12 @@ git push origin +master
 git tag v1.0.0
 git push origin v1.0.0
 
-##
+##Удалить тег локально
+git tag -d v1.0.0
+##Удалить тег удаленно
+git push origin --delete v1.0.0
+
+##Перейти на другую ветку через тег
+git checkout v1.1.0
+
+
