@@ -1,1 +1,3 @@
-var a="qwerty"
+var a="asdfgh"
+
+var b="123"
