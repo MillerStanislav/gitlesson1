@@ -3,3 +3,4 @@ var a="afgh"
 var b="123"
 
 lab=my
+pass=123

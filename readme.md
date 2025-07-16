@@ -111,4 +111,5 @@ git push origin --delete v1.0.0
 ##Перейти на другую ветку через тег
 git checkout v1.1.0
 
-
+##
+git rebase dev2
