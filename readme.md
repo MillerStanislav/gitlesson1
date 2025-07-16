@@ -96,6 +96,8 @@ git reset --soft HEAD~4
 ##Для того чтобы запушить использовать
 git push origin +master
 ##Еще варианты (не проверял): git merge origin/master и git rebase origin/master
+##Перезаписать историю на удаленном репозитории
+git push origin master --force
 
 ##Добавление тегов
 git tag v1.0.0
