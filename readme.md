@@ -88,7 +88,18 @@ git checkout master
 ##Изменить существующий коммит
 git commit --amend
 
+##Копирует file.txt из HEAD в Индекс
+git reset file.txt
+
+##Копирует file.txt из указанного коммита в Индекс
+git reset <hash коммита> file.txt
+
+##Вернуться на предыдущий коммит (т.е. отменить git add и git commit),
+##но оставить содержимое файлов неизменным
+git reset [--mixed] HEAD~
+
 ##Перейти на пару коммитов вниз и удалить верхние
+##также удалятся все изменения
 git reset --hard HEAD~2
 
 ##Сохранить все изменения в файлах, но удалить коммиты
@@ -98,6 +109,7 @@ git push origin +master
 ##Еще варианты (не проверял): git merge origin/master и git rebase origin/master
 ##Перезаписать историю на удаленном репозитории
 git push origin master --force
+##И далее выполнить git commit и git push
 
 ##Добавление тегов
 git tag v1.0.0
@@ -111,5 +123,8 @@ git push origin --delete v1.0.0
 ##Перейти на другую ветку через тег
 git checkout v1.1.0
 
-##
+##Разрешение конфликтов через rebase
 git rebase dev2
+git commit -am "Resolved conflicts"
+git rebase --continue
+
